@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhav Physiotherapy | Home Visit& Clinic | Expert Rehabilitation</title>
+  <meta name="description" content="Madhav Physiotherapy offers expert home visit physiotherapy, post-surgical rehab, geriatric care, pediatric physio, sports injury recovery & pain management. Book today!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #84a98c;
+      --sage-dark: #52796f;
+      --sage-light: #a3c4a8;
+      --rose: #e8a598;
+      --rose-light: #f0c4b8;
+      --rose-dark: #d4847a;
+      --warm-white: #f5f0e8;
+      --warm-white-dark: #ede6da;
+      --white: #ffffff;
+      --dark: #2d3436;
+      --dark-2: #1e2426;
+      --text: #2d3436;
+      --text-muted: #636e72;
+      --text-light: #b2bec3;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.09);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.11);
+      --shadow-xl: 0 20px 50px rgba(0,0,0,0.14);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      --transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      --font-head: 'DM Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--warm-white); color: var(--text); line-height: 1.65; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── HEADER ── */
+    .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(245,240,232,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(132,169,140,0.12); transition: var(--transition); }
+    .header.scrolled { box-shadow: var(--shadow-md); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: 1200px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--sage), var(--sage-dark)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(82,121,111,0.25); }
+    .logo-icon svg { width: 24px; height: 24px; }
+    .logo-text { font-family: var(--font-head); font-weight: 800; font-size: 1.2rem; color: var(--dark); letter-spacing: -0.3px; }
+    .logo-text .accent { color: var(--sage-dark); }
+    .nav { display: none; gap: 28px; list-style: none; }
+    .nav a { font-family: var(--font-body); font-weight: 500; font-size: 0.88rem; color: var(--text-muted); transition: var(--transition); position: relative; padding-bottom: 4px; }
+    .nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--sage-dark); border-radius: 2px; transition: var(--transition); }
+    .nav a:hover { color: var(--dark); }
+    .nav a:hover::after { width: 100%; }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .btn-call { display: flex; align-items: center; gap: 6px; background: var(--sage-dark); color: white; padding: 9px 18px; border-radius: var(--radius-full); font-family: var(--font-head); font-weight: 700; font-size: 0.85rem; transition: var(--transition); box-shadow: 0 4px 12px rgba(82,121,111,0.25); }
+    .btn-call:hover { background: var(--dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(82,121,111,0.35); }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+    .hamburger span { width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: var(--transition); }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-menu { position: fixed; top: 70px; left: 0; right: 0; background: var(--warm-white); border-bottom: 1px solid rgba(132,169,140,0.12); padding: 20px; transform: translateY(-110%); opacity: 0; transition: var(--transition); z-index: 999; box-shadow: var(--shadow-lg); }
+    .mobile-menu.active { transform: translateY(0); opacity: 1; }
+    .mobile-menu a { display: block; padding: 12px 0; font-family: var(--font-head); font-weight: 600; font-size: 1rem; color: var(--text); border-bottom: 1px solid rgba(132,169,140,0.1); }
+    .mobile-menu a:last-child { border: none; }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 0 80px; position: relative; overflow: hidden; background: var(--warm-white); }
+    .hero::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(132,169,140,0.1) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(232,165,152,0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, rgba(132,169,140,0.12), rgba(232,165,152,0.06)); border: 1px solid rgba(132,169,140,0.2); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; color: var(--sage-dark); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .hero h1 { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; color: var(--dark); letter-spacing: -1px; margin-bottom: 20px; }
+    .hero h1 .highlight { color: var(--sage-dark); }
+    .hero-desc { font-size: 1.05rem; color: var(--text-muted); max-width: 500px; margin-bottom: 32px; line-height: 1.8; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--sage), var(--sage-dark)); color: white; padding: 14px 28px; border-radius: var(--radius-full); font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; transition: var(--transition); box-shadow: 0 8px 25px rgba(82,121,111,0.28); position: relative; overflow: hidden; }
+    .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: left 0.5s; }
+    .btn-primary:hover::before { left: 100%; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 35px rgba(82,121,111,0.38); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--dark); border: 2px solid rgba(132,169,140,0.25); padding: 14px 28px; border-radius: var(--radius-full); font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; transition: var(--transition); }
+    .btn-secondary:hover { border-color: var(--sage-dark); background: var(--warm-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .hero-rating { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .stars { display: flex; gap: 2px; }
+    .star { color: var(--rose-dark); font-size: 1rem; }
+    .rating-text { font-family: var(--font-head); font-weight: 700; font-size: 0.9rem; color: var(--dark); }
+    .rating-sub { font-size: 0.8rem; color: var(--text-muted); }
+    .hero-visual { position: relative; display: flex; justify-content: center; }
+    .hero-card-stack { position: relative; width: 100%; max-width: 420px; }
+    .hero-main-card { background: white; border-radius: var(--radius-xl); padding: 32px; box-shadow: var(--shadow-xl); border: 1px solid rgba(132,169,140,0.1); position: relative; z-index: 2; }
+    .hero-main-card .clinic-img { width: 100%; height: 200px; background: linear-gradient(135deg, var(--sage), var(--sage-dark)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; overflow: hidden; position: relative; }
+    .hero-main-card .clinic-img::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); }
+    .hero-main-card .clinic-img svg { width: 80px; height: 80px; color: white; opacity: 0.5; position: relative; }
+    .hero-float-card { position: absolute; background: white; border-radius: var(--radius-lg); padding: 14px 18px; box-shadow: var(--shadow-lg); border: 1px solid rgba(232,165,152,0.15); z-index: 3; }
+    .hero-float-card.top-right { top: -20px; right: -20px; }
+    .hero-float-card.bottom-left { bottom: -20px; left: -20px; }
+    .float-card-inner { display: flex; align-items: center; gap: 10px; }
+    .float-card-icon { width: 36px; height: 36px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+    .float-card-icon.sage { background: rgba(132,169,140,0.12); color: var(--sage-dark); }
+    .float-card-icon.rose { background: rgba(232,165,152,0.15); color: var(--rose-dark); }
+    .float-card-label { font-family: var(--font-head); font-weight: 700; font-size: 0.8rem; color: var(--dark); }
+    .float-card-sub { font-size: 0.7rem; color: var(--text-muted); }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background: var(--dark); padding: 32px 0; position: relative; overflow: hidden; }
+    .stats-bar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(132,169,140,0.1), rgba(232,165,152,0.05)); }
+    .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; position: relative; }
+    .stat-item { text-align: center; padding: 16px; }
+    .stat-number { font-family: var(--font-head); font-size: 2rem; font-weight: 800; color: var(--sage-light); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── SERVICES ── */
+    .section { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(132,169,140,0.1); border: 1px solid rgba(132,169,140,0.18); padding: 6px 14px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; color: var(--sage-dark); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .section-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; margin-bottom: 14px; }
+    .section-sub { font-size: 1rem; color: var(--text-muted); max-width: 540px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .service-card { background: white; border-radius: var(--radius-lg); padding: 28px; border: 1px solid rgba(132,169,140,0.1); transition: var(--transition); cursor: default; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--sage), var(--rose)); transform: scaleX(0); transform-origin: left; transition: var(--transition); }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(132,169,140,0.2); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon { width: 52px; height: 52px; background: linear-gradient(135deg, rgba(132,169,140,0.1), rgba(232,165,152,0.06)); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; transition: var(--transition); }
+    .service-card:hover .service-icon { background: linear-gradient(135deg, var(--sage), var(--sage-dark)); }
+    .service-icon svg { width: 26px; height: 26px; color: var(--sage-dark); transition: var(--transition); }
+    .service-card:hover .service-icon svg { color: white; }
+    .service-title { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--dark); margin-bottom: 8px; }
+    .service-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── ABOUT ── */
+    .about-section { background: white; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
+    .about-image { position: relative; }
+    .about-image-main { width: 100%; height: 360px; background: linear-gradient(135deg, var(--sage), var(--sage-dark)); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .about-image-main::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .about-image-main svg { width: 100px; height: 100px; color: white; opacity: 0.5; position: relative; }
+    .about-exp-badge { position: absolute; bottom: -16px; right: 24px; background: var(--rose-dark); color: white; padding: 16px 24px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); text-align: center; }
+    .about-exp-badge .num { font-family: var(--font-head); font-size: 2rem; font-weight: 800; line-height: 1; }
+    .about-exp-badge .txt { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; }
+    .about-content h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; margin-bottom: 16px; }
+    .about-content p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.8; }
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .about-feature { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; color: var(--dark); }
+    .about-feature svg { width: 18px; height: 18px; color: var(--sage-dark); flex-shrink: 0; }
+
+    /* ── CTA ── */
+    .cta-section { padding: 80px 0; }
+    .cta-box { background: linear-gradient(135deg, var(--sage), var(--sage-dark)); border-radius: var(--radius-xl); padding: 48px 32px; text-align: center; position: relative; overflow: hidden; }
+    .cta-box::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); border-radius: 50%; }
+    .cta-box::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(232,165,152,0.2) 0%, transparent 70%); border-radius: 50%; }
+    .cta-box h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; color: white; margin-bottom: 12px; position: relative; }
+    .cta-box p { color: rgba(255,255,255,0.85); margin-bottom: 28px; font-size: 1.05rem; position: relative; }
+    .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; position: relative; }
+    .btn-white { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--sage-dark); padding: 14px 28px; border-radius: var(--radius-full); font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; transition: var(--transition); box-shadow: var(--shadow-lg); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: var(--shadow-xl); }
+    .btn-outline-white { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; border: 2px solid rgba(255,255,255,0.35); padding: 14px 28px; border-radius: var(--radius-full); font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; transition: var(--transition); }
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ── CONTACT ── */
+    .contact-section { background: white; }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
+    .contact-info h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; margin-bottom: 12px; }
+    .contact-info > p { color: var(--text-muted); margin-bottom: 28px; }
+    .contact-detail { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; }
+    .contact-item-icon { width: 44px; height: 44px; background: rgba(132,169,140,0.1); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { width: 20px; height: 20px; color: var(--sage-dark); }
+    .contact-item-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .contact-item-value { font-family: var(--font-head); font-weight: 700; color: var(--dark); font-size: 0.95rem; }
+    .contact-map { width: 100%; height: 200px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(132,169,140,0.12); }
+    .contact-map iframe { width: 100%; height: 100%; border: none; }
+    .contact-form-wrap { background: var(--warm-white); border-radius: var(--radius-xl); padding: 32px; border: 1px solid rgba(132,169,140,0.12); }
+    .contact-form-wrap h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.2rem; color: var(--dark); margin-bottom: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid rgba(132,169,140,0.18); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.95rem; background: white; color: var(--dark); transition: var(--transition); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--sage-dark); box-shadow: 0 0 0 3px rgba(82,121,111,0.1); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-submit { width: 100%; background: linear-gradient(135deg, var(--sage), var(--sage-dark)); color: white; padding: 14px; border-radius: var(--radius-md); font-family: var(--font-head); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: var(--transition); box-shadow: 0 4px 15px rgba(82,121,111,0.28); }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(82,121,111,0.38); }
+
+    /* ── WAVE DIVIDER ── */
+    .wave-divider { line-height: 0; margin-top: -1px; }
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--dark); color: rgba(255,255,255,0.65); padding: 64px 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-brand .logo { margin-bottom: 16px; }
+    .footer-brand .logo-text { color: white; }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social { width: 38px; height: 38px; background: rgba(255,255,255,0.07); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+    .footer-social:hover { background: var(--sage); }
+    .footer-social svg { width: 18px; height: 18px; }
+    .footer-col h4 { font-family: var(--font-head); font-weight: 700; font-size: 0.9rem; color: white; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a { font-size: 0.85rem; transition: var(--transition); }
+    .footer-col ul a:hover { color: var(--sage-light); padding-left: 4px; }
+    .footer-col.contact-col .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.85rem; }
+    .footer-col.contact-col svg { width: 16px; height: 16px; color: var(--sage-light); flex-shrink: 0; margin-top: 2px; }
+    .footer-map { width: 100%; height: 140px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(255,255,255,0.07); }
+    .footer-map iframe { width: 100%; height: 100%; border: none; filter: grayscale(1) invert(1) contrast(0.9); }
+    .footer-bottom { padding: 20px 0; text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+
+    /* ── WHATSAPP BUTTON ── */
+    .whatsapp-btn { position: fixed; bottom: 24px; right: 24px; z-index: 9999; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); cursor: pointer; transition: var(--transition); animation: whatsapp-pulse 2s infinite; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+    .whatsapp-btn svg { width: 30px; height: 30px; color: white; }
+    @keyframes whatsapp-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── RESPONSIVE ── */
+    @media (min-width: 640px) {
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+      .about-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 768px) {
+      .nav { display: flex; }
+      .hamburger { display: none; }
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
+    }
+    @media (min-width: 1024px) {
+      .container { padding: 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <span class="logo-text">Madhav<span class="accent">Physio</span></span>
+    </a>
+    <ul class="nav">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="header-actions">
+      <a href="tel:+917****7011" class="btn-call">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="tel:+917****7011" onclick="closeMenu()">📞 Call Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge reveal">🏠 Home Visit Available — Expert Physiotherapy</div>
+        <h1 class="reveal reveal-delay-1">
+          Move Better,<span class="highlight">Live Pain-Free</span>
+        </h1>
+        <p class="hero-desc reveal reveal-delay-2">
+          Expert physiotherapy delivered to your doorstep or at our clinic. From post-surgical rehab to sports injuries — we help you recover faster, naturally.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="https://wa.me/917290927011?text=Hi%2C%20I%20want%20to%20book%20a%20physiotherapy%20session%20at%20Madhav%20Physiotherapy" class="btn-primary" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 21.211l4.491-1.479A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.67-5.804-1.811l-.417-.275-2.904.956.937-2.885-.286-.41A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Free Assessment
+          </a>
+        </div>
+        <div class="hero-rating reveal reveal-delay-4">
+          <div class="stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <div>
+            <div class="rating-text">4.8 ★ Google Rating</div>
+            <div class="rating-sub">Based on 58 patient reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-2">
+        <div class="hero-card-stack">
+          <div class="hero-main-card">
+            <div class="clinic-img">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:var(--font-head);font-weight:800;font-size:1.3rem;color:var(--dark);margin-bottom:4px">Madhav Physiotherapy</div>
+              <div style="font-size:0.85rem;color:var(--text-muted)">Expert Rehab& Recovery</div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px">
+                <span style="background:rgba(132,169,140,0.1);color:var(--sage-dark);padding:4px 10px;border-radius:999px;font-size:0.75rem;font-weight:700">✓ Verified</span>
+                <span style="background:rgba(232,165,152,0.15);color:var(--rose-dark);padding:4px 10px;border-radius:999px;font-size:0.75rem;font-weight:700">★ 4.8</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-float-card top-right">
+            <div class="float-card-inner">
+              <div class="float-card-icon sage">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <div class="float-card-label">Home Visits</div>
+                <div class="float-card-sub">We come to you!</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-float-card bottom-left">
+            <div class="float-card-inner">
+              <div class="float-card-icon rose">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="float-card-label">+91 72909 27011</div>
+                <div class="float-card-sub">Book session now</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="58">0</div>
+        <div class="stat-label">Google Reviews</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-number" data-target="4.8" data-decimal="true">0</div>
+        <div class="stat-label">★ Rating</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-number" data-target="10">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-number" data-target="1800" data-suffix="+">0</div>
+        <div class="stat-label">Patients Treated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">💪 Our Services</div>
+      <h2 class="section-title reveal reveal-delay-1">Comprehensive Physiotherapy Care</h2>
+      <p class="section-sub reveal reveal-delay-2">From home visits to clinic sessions — expert rehabilitation tailored to your needs</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="service-title">Home Visit Physiotherapy</h3>
+        <p class="service-desc">Expert physiotherapy in the comfort of your home. Ideal for patients with mobility challenges or busy schedules — we bring the clinic to you.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="service-title">Post-Surgical Rehab at Home</h3>
+        <p class="service-desc">Structured rehabilitation programs after joint replacement, fracture, or spinal surgery — guided recovery in your own home environment.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="service-title">Geriatric Physiotherapy</h3>
+        <p class="service-desc">Specialized care for elderly patients to improve balance, mobility, and strength — reducing fall risk and enhancing quality of life.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3 class="service-title">Pediatric Physio</h3>
+        <p class="service-desc">Gentle, age-appropriate physiotherapy for children with developmental delays, cerebral palsy, and musculoskeletal conditions.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="service-title">Sports Injury Recovery</h3>
+        <p class="service-desc">Rapid, effective treatment for sports-related injuries including sprains, strains, tears, and overuse injuries — get back in the game faster.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-5">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="service-title">Pain Management Therapy</h3>
+        <p class="service-desc">Comprehensive pain management using manual therapy, exercise prescription, and electrotherapy for chronic pain, back pain, and arthritis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image reveal">
+        <div class="about-image-main">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="about-exp-badge">
+          <div class="num">10+</div>
+          <div class="txt">Years of Expert Care</div>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-delay-2">
+        <div class="section-tag">💪 About Madhav Physiotherapy</div>
+        <h2>Your Recovery, Our Mission</h2>
+        <p>At Madhav Physiotherapy, we combine clinical expertise with genuine compassion to help patients recover from injury, surgery, and chronic conditions. Our personalized approach ensures every patient receives targeted, evidence-based treatment — whether at our clinic or in the comfort of their home.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Certified Physiotherapists
+          </div>
+          <div class="about-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Home Visit Available
+          </div>
+          <div class="about-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Evidence-Based Treatment
+          </div>
+          <div class="about-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Affordable Sessions
+          </div>
+        </div>
+        <a href="tel:+917****7011" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call: +91 72909 27011
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Ready to Move Pain-Free Again?</h2>
+      <p>Book your physiotherapy session today — home visits available. Take the first step towards full recovery.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/917290927011?text=Hi%2C%20I%20want%20to%20book%20a%20physiotherapy%20session%20at%20Madhav%20Physiotherapy" class="btn-white" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 21.211l4.491-1.479A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.67-5.804-1.811l-.417-.275-2.904.956.937-2.885-.286-.41A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          WhatsApp Us Now
+        </a>
+        <a href="tel:+917****7011" class="btn-outline-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call: +91 72909 27011
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag reveal">📍 Get In Touch</div>
+      <h2 class="section-title reveal reveal-delay-1">Book Your Session Today</h2>
+      <p class="section-sub reveal reveal-delay-2">Call, WhatsApp, or fill the form — we'll respond promptly and get you scheduled.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Contact Information</h2>
+        <p>Home visits available! Call or WhatsApp us to schedule your physiotherapy session.</p>
+        <div class="contact-detail">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value">+91 72909 27011</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 21.211l4.491-1.479A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.67-5.804-1.811l-.417-.275-2.904.956.937-2.885-.286-.41A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">WhatsApp</div>
+              <div class="contact-item-value">wa.me/917290927011</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">India</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEyJzAwLjAiTiA0MMgMTIgMDAuMCJF!5e0!3m2!1sen!2sin!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3>📩 Book Your Session</h3>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your condition or injury..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">Book Session 💪</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE DIVIDER -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V80H0V40Z" fill="#2d3436"/>
+  </svg>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="logo-text">Madhav <span class="accent">Physio</span></span>
+        </a>
+        <p>Expert physiotherapy and rehabilitation services. Home visits available. Move better, live pain-free.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/917290927011" class="footer-social" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 21.211l4.491-1.479A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.67-5.804-1.811l-.417-.275-2.904.956.937-2.885-.286-.41A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://wa.me/917290927011">Book Session</a></li>
+        </ul>
+      </div>
+      <div class="footer-col contact-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.96-1.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 72909 27011</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@madhavphysio.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>India</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDEyJzAwLjAiTiA0MMgMTIgMDAuMCJF!5e0!3m2!1sen!2sin!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Madhav Physiotherapy. All rights reserved. | Expert Rehabilitation& Recovery</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/917290927011?text=Hi%2C%20I%20want%20to%20book%20a%20physiotherapy%20session%20at%20Madhav%20Physiotherapy" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 21.211l4.491-1.479A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.137 0-4.146-.67-5.804-1.811l-.417-.275-2.904.956.937-2.885-.286-.41A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Madhav Physiotherapy",
+  "description": "Expert physiotherapy services including home visits, post-surgical rehab, geriatric care, pediatric physio, sports injury recovery, and pain management.",
+  "image": "",
+  "telephone": "+917****7011",
+  "address": { "@type": "PostalAddress", "addressCountry": "IN" },
+  "geo": { "@type": "GeoCoordinates", "latitude": "0", "longitude": "0" },
+  "url": "https://madhavphysiotherapy.com",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "58" },
+  "openingHours": "Mo-Sa 08:00-20:00",
+  "priceRange": "₹₹"
+}
+</script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const isDecimal = el.dataset.decimal === 'true';
+        const suffix = el.dataset.suffix || '';
+        const duration = 2000;
+        const start = performance.now();
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = eased * target;
+          el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  statNumbers.forEach(el => counterObserver.observe(el));
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending... ✈️';
+    btn.style.opacity = '0.7';
+    setTimeout(() => {
+      btn.textContent = 'Session Booked! ✅';
+      btn.style.background = 'linear-gradient(135deg, #e8a598, #d4847a)';
+      setTimeout(() => {
+        btn.textContent = 'Book Session 💪';
+        btn.style.background = '';
+        btn.style.opacity = '';
+        e.target.reset();
+      }, 3000);
+    }, 1500);
+  }
+</script>
+</body>
+</html>
